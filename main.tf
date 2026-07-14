@@ -9,16 +9,15 @@ module "eks" {
   cluster_name    = "jenkins-eks"
   cluster_version = "1.30"
 
+  cluster_endpoint_public_access  = true
+  cluster_endpoint_private_access = true
+
   vpc_id = "vpc-0c1f5a8a24d5b7db9"
 
   subnet_ids = [
     "subnet-05d1b0ed4beb1e52d",
-    "subnet-01e6032afcd96c6e6",
-    "subnet-0640d9e3a6a360dab"
+    "subnet-0578187ade4c3b1db"
   ]
-
-  cluster_endpoint_public_access  = true
-  cluster_endpoint_private_access = true
 
   eks_managed_node_groups = {
     default = {
