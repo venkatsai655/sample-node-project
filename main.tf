@@ -6,7 +6,7 @@ module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "~> 20.0"
 
-  cluster_name    = "jenkins-eks"
+  cluster_name    = "venkat-eks"
   cluster_version = "1.30"
 
   cluster_endpoint_public_access  = true
@@ -15,8 +15,8 @@ module "eks" {
   vpc_id = "vpc-0c1f5a8a24d5b7db9"
 
   subnet_ids = [
-    "subnet-05d1b0ed4beb1e52d",  # us-east-1a
-    "subnet-0cb5576f40c1ec0cc"   # us-east-1b
+    "subnet-05d1b0ed4beb1e52d",
+    "subnet-0cb5576f40c1ec0cc"
   ]
 
   eks_managed_node_groups = {
