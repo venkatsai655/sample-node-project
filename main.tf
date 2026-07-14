@@ -15,8 +15,8 @@ module "eks" {
   vpc_id = "vpc-0c1f5a8a24d5b7db9"
 
   subnet_ids = [
-    "subnet-05d1b0ed4beb1e52d",
-    "subnet-0578187ade4c3b1db"
+    "subnet-05d1b0ed4beb1e52d",  # us-east-1a
+    "subnet-0cb5576f40c1ec0cc"   # us-east-1b
   ]
 
   eks_managed_node_groups = {
